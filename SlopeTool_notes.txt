@@ -1,0 +1,25 @@
+Date: 13-06-2016   Programmed by: Deirdre Bolger
+
+Suite of Matlab scripts allowing the user to selected a temporal region of an ERP or several ERPs grand averages.
+The minima and maxima in the selected temporal region will be located. 
+The minima to maxima and maxima to minima slope coefficients will be calculated using least squares regression and plotted.
+Clicking on the plotted regression lines allows the user to visualise the slope coefficient and the time (in millisecond) of the corresponding maxima and minima points.
+
+The script presents the grand average of a single pre-defined electrode and the user can select the temporal region of interest (ROI) on this electrode. 
+However, once a temporal ROI is selected on this individual electrode, the programme identifies the minima and maxima for all electrodes and subjects.
+If the grand average plot presents the grand average of more than one condition, the programme will identify the peaks, maxima and calculate the slopes for all conditions, 
+all subjects and all electrodes. This subject-level data is saved as a structure in the workspace as a 1x1 structure "AllSlopeData".
+A window for each experimental condition opens showing, for each electrode, the peaks, minima and slopes of the grand average data. Clicking on the individual subplots 
+allows the user to visualise, in detail, the peaks, minima and slope data for the selected electrode. Clicking on individual regression lines allows the user to
+visualise the slope coefficient and the time of the corresponding minima and peaks (in milliseconds). 
+This window also contains a plot of the entire epoch and a plot of the signal in the selected ROI modelled by polynomial curve fitting. 
+
+To run the SlopeTool, run the script: CREx_ERPSlopeAmp_calc.m
+
+Other scripts necessary for this tool are:
+- CREx_getDataAnalysis.m
+- CREx_peakfinder.m
+- ClickonData.m
+- SaveSlopes.m
+
+
