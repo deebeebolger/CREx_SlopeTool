@@ -1,8 +1,8 @@
 % 
 close all; clear all;
 
-Cond_names={'NOL' 'NOL'};     %Can only have a single element
-Group_names={'MotsCC' 'MotsIC'}; % Can only accept two elements
+Cond_names={'Cond1' 'Cond1'};     %Can only have a single element
+Group_names={'Group1' 'Group2'}; % Can only accept two elements
 sujnum=30;                       %very important to specify the correct number of subjects.
 elecnum=64;                     %number of electrodes over which to base GFP calculation.
 channel='Cz';                     %electrode used for visualising the full epoch and selecting temporal interval
@@ -11,7 +11,7 @@ channel='Cz';                     %electrode used for visualising the full epoch
 dircond=cell(1,length(Group_names));
 filescond=cell(1,length(Group_names));
 fileIndex=cell(1,length(Group_names));
-currbase='F:\BLRI\EEG\Projets_en_cours\Projet_MotInter\ExpEEG_Phase1\Data_Biosemi\P1AUD_Results\'; %the base directory
+currbase=''; % define the base directory
 
 [ALLEEG EEG CURRENTSET ALLCOM] = eeglab;  %open an eeglab session and load in all the necessary files
 
