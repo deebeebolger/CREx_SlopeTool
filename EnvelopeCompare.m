@@ -19,7 +19,7 @@ tempdata=curvefitteddata{condnum,elec};
 b1=zeros(numsub,1);
 s1=zeros(numsub,1);
 f2=figure; set(f2,'Color',[1 1 1])
-condnames={'NOL' 'DYS'};
+condnames={'Cond1' 'Cond2'};
 
 for counter=1:numsub
     
